@@ -29,7 +29,7 @@ variable "environment" {
 
 variable "users" {
   description = "User -> grupul din care face parte"
-  type = map(string)
+  type        = map(string)
   default = {
     ana   = "developers"
     mihai = "developers"
@@ -39,7 +39,7 @@ variable "users" {
 
 variable "readonly_role_user" {
   description = "Read only"
-  type = string
-  default = "elena"
+  type        = string
+  default     = "elena"
 }
 
