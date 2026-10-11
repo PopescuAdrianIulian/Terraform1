@@ -31,7 +31,7 @@ data "aws_iam_policy_document" "lambda_trust" {
 
 resource "aws_iam_role" "lambda_exec" {
   assume_role_policy = data.aws_iam_policy_document.lambda_trust.json
-  name = "lambda-exec-role"
+  name               = "lambda-exec-role"
 }
 
 resource "aws_iam_role_policy_attachment" "lambda_logs" {

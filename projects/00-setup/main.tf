@@ -3,6 +3,6 @@ resource "aws_s3_bucket" "this" {
 
   tags = {
     Environment = "learning"
-    TestTag = "TEST"
+    TestTag     = "TEST"
   }
 }

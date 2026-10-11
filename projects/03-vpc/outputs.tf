@@ -1,27 +1,27 @@
 output "vpc_id" {
-  value = aws_vpc.this.id
+  value = module.vpc.vpc_id
 }
 
 output "vpc_cidr" {
-  value = aws_vpc.this.cidr_block
+  value = module.vpc.vpc_cidr
 }
 
 output "public_subnet_ids" {
-  value = [for s in aws_subnet.public : s.id]
+  value = module.vpc.public_subnet_ids
 }
 
 output "private_subnet_ids" {
-  value = [for s in aws_subnet.private : s.id]
+  value = module.vpc.private_subnet_ids
 }
 
 output "web_sg_id" {
-  value = aws_security_group.web.id
+  value = module.vpc.web_sg_id
 }
 
 output "app_sg_id" {
-  value = aws_security_group.app.id
+  value = module.vpc.app_sg_id
 }
 
 output "nat_public_ips" {
-  value = [for e in aws_eip.nat : e.public_ip]
+  value = module.vpc.nat_public_ips
 }
